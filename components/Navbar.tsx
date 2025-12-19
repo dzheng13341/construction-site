@@ -12,6 +12,7 @@ export default function Navbar() {
           <Link href="/" className=" text-black">Home</Link>
           <Link href="/services" className=" text-black">Services</Link>
           <Link href="/projects" className="text-black">Projects</Link>
+          <Link href="/jobs" className="text-black">Jobs</Link>
           <Link href="/contact" className="text-black">Contact</Link>
         </div>
       </div>
