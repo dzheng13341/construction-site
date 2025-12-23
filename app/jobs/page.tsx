@@ -58,7 +58,7 @@ export default function JobsPage() {
 
             <div>
               <p className="font-semibold">Phone</p>
-              <p>(555) 123-4567</p>
+              <p>(916) 291-9416</p>
             </div>
 
             <div>

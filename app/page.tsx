@@ -22,7 +22,7 @@ export default function HomePage() {
           className="max-w-6xl mx-auto px-6 text-center"
         >
           <h1 className="text-5xl font-bold text-black mb-6">
-            Quality Construction & HVAC You Can Trust
+            Quality Construction You Can Trust
           </h1>
           <p className="text-gray-700 text-xl mb-10">
             Reliable service, skilled craftsmanship, and honest work from start to finish.

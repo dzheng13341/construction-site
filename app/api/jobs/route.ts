@@ -1,65 +1,57 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-import formidable from "formidable";
-import fs from "fs";
 
-export const config = {
-  api: { bodyParser: false },
-};
-
-export async function POST(req: Request) {
+export async function POST(request: Request) {
   try {
-    // Parse multipart/form-data
-    const data = await new Promise<any>((resolve, reject) => {
-      const form = formidable({ multiples: false });
-      form.parse(req as any, (err, fields, files) => {
-        if (err) reject(err);
-        else resolve({ fields, files });
+    const formData = await request.formData();
+
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const jobType = formData.get("jobType") as string;
+    const message = formData.get("message") as string;
+    const file = formData.get("file") as File | null;
+
+    let attachments = [];
+
+    if (file) {
+      const buffer = Buffer.from(await file.arrayBuffer());
+
+      attachments.push({
+        filename: file.name,
+        content: buffer,
       });
-    });
-
-    const { name, email, jobType, message } = data.fields;
-    const resume = data.files?.file;
-
-    if (!name || !email) {
-      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    // Setup transporter
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
-      secure: Number(process.env.SMTP_PORT) === 465,
+      secure: true, // true for 465, false for 587
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
     });
 
-    // Send mail
-    const mailOptions: any = {
+    await transporter.sendMail({
       from: `"Job Application" <${process.env.SMTP_USER}>`,
-      to: process.env.SMTP_USER,
-      replyTo: email,
-      subject: `New Job Application: ${jobType} - ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\nJob Type: ${jobType}\n\nMessage:\n${message}`,
-    };
+      to: "info@airandsunco.com",
+      subject: `New Job Application – ${jobType}`,
+      html: `
+        <h2>New Job Application</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Position:</strong> ${jobType}</p>
+        <p><strong>Message:</strong><br/>${message}</p>
+      `,
+      attachments,
+    });
 
-    // Attach resume if present
-    if (resume) {
-      mailOptions.attachments = [
-        {
-          filename: resume.originalFilename,
-          content: fs.readFileSync(resume.filepath),
-        },
-      ];
-    }
-
-    await transporter.sendMail(mailOptions);
-
-    return NextResponse.json({ success: true });
+    return Response.json({ success: true });
   } catch (error) {
     console.error(error);
-    return NextResponse.json({ error: "Failed to send application" }, { status: 500 });
+    return Response.json(
+      { error: "Failed to send application" },
+      { status: 500 }
+    );
   }
 }

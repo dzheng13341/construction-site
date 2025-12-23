@@ -33,9 +33,9 @@ export default function Footer() {
             Contact
           </h4>
           <ul className="space-y-2 text-sm">
-            <li>📞 (555) 123-4567</li>
+            <li>📞 (916) 291-9416</li>
             <li>✉️ info@airandsunco.com</li>
-            <li>📍 Sacramento, CA</li>
+            <li>📍 8982 Elder Creek Rd Sacramento, CA</li>
           </ul>
         </div>
 
