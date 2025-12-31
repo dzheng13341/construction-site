@@ -1,5 +1,11 @@
-import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+
+const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
+const ALLOWED_TYPES = [
+  "application/pdf",
+  "application/msword",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+];
 
 export async function POST(request: Request) {
   try {
@@ -14,6 +20,22 @@ export async function POST(request: Request) {
     let attachments = [];
 
     if (file) {
+      // ✅ File size validation
+      if (file.size > MAX_FILE_SIZE) {
+        return Response.json(
+          { error: "File size exceeds 5MB limit." },
+          { status: 400 }
+        );
+      }
+
+      // ✅ File type validation (recommended)
+      if (!ALLOWED_TYPES.includes(file.type)) {
+        return Response.json(
+          { error: "Invalid file type. Only PDF or Word documents allowed." },
+          { status: 400 }
+        );
+      }
+
       const buffer = Buffer.from(await file.arrayBuffer());
 
       attachments.push({

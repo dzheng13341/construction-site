@@ -1,62 +1,59 @@
-import ProjectCard from "@/components/ProjectCard";
+"use client";
+
+import { motion } from "framer-motion";
+import ProjectsCard from "@/components/ProjectCard";
 
 const projects = [
   {
-    title: "Modern Office Renovation",
-    category: "Commercial Renovation",
-    image: "🏢",
+    title: "Modern Home Renovation",
+    category: "Renovation",
+    description: "Complete interior and exterior remodel with modern finishes.",
+    image: "/projects/modern-renovation.jpg",
   },
   {
-    title: "Luxury Home Remodel",
-    category: "Residential Renovation",
-    image: "🏠",
-  },
-  {
-    title: "Industrial HVAC Upgrade",
+    title: "Commercial HVAC Installation",
     category: "HVAC",
-    image: "❄️",
+    description: "High-efficiency HVAC system for a commercial building.",
+    image: "/projects/commercial-hvac1.jpg",
   },
   {
-    title: "Retail Space Build-Out",
-    category: "Commercial Construction",
-    image: "🏗️",
+    title: "Kitchen Remodel",
+    category: "Construction",
+    description: "Custom cabinetry, countertops, and lighting upgrades.",
+    image: "/projects/kitchen-remodel.jpg",
   },
   {
-    title: "Electrical System Overhaul",
-    category: "Electrical",
-    image: "⚡",
-  },
-  {
-    title: "Apartment Complex Renovation",
-    category: "Residential",
-    image: "🏘️",
+    title: "Office Build-Out",
+    category: "Commercial",
+    description: "Full office construction with electrical and HVAC work.",
+    image: "/projects/office-buildout.jpg",
   },
 ];
 
 export default function ProjectsPage() {
   return (
-    <section className="bg-gray-50 py-24">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-20">
-          <h1 className="text-5xl font-bold mb-6 text-black">
+    <section className="bg-white py-24">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Header & Description */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col items-center gap-4 mb-12"
+        >
+          <h1 className="text-3xl md:text-4xl font-bold text-black text-center">
             Our Projects
           </h1>
-          <p className="text-lg text-black max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-gray-700 max-w-2xl text-center">
             A selection of projects showcasing our commitment to quality,
             craftsmanship, and attention to detail.
           </p>
-        </div>
+        </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project) => (
-            <ProjectCard
-              key={project.title}
-              title={project.title}
-              category={project.category}
-              image={project.image}
-            />
+            <ProjectsCard key={project.title} {...project} />
           ))}
         </div>
       </div>

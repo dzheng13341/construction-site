@@ -2,6 +2,14 @@
 
 import { useState } from "react";
 
+const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
+const ALLOWED_FILE_TYPES = [
+  "application/pdf",
+  "application/msword",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+];
+const ALLOWED_EXTENSIONS = ["pdf", "doc", "docx"];
+
 export default function JobsPage() {
   const [form, setForm] = useState({
     name: "",
@@ -11,30 +19,48 @@ export default function JobsPage() {
     file: null as File | null,
   });
   const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(e: React.FormEvent) {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("Sending...");
+    setLoading(true);
+    setStatus("");
 
     const formData = new FormData();
     formData.append("name", form.name);
     formData.append("email", form.email);
     formData.append("jobType", form.jobType);
     formData.append("message", form.message);
-    if (form.file) formData.append("file", form.file);
 
-    const res = await fetch("/api/jobs", {
-      method: "POST",
-      body: formData,
-    });
-
-    if (res.ok) {
-      setStatus("Application sent successfully!");
-      setForm({ name: "", email: "", jobType: "HVAC", message: "", file: null });
-    } else {
-      setStatus("Failed to send application. Please try again.");
+    if (form.file) {
+      formData.append("file", form.file);
     }
-  }
+
+    try {
+      const res = await fetch("/api/jobs", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Failed to submit application");
+      }
+
+      setStatus("Application submitted successfully!");
+      setForm({
+        name: "",
+        email: "",
+        jobType: "HVAC Team",
+        message: "",
+        file: null,
+      });
+    } catch (err: any) {
+      setStatus(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <section className="bg-white py-24">
@@ -95,9 +121,9 @@ export default function JobsPage() {
               onChange={(e) => setForm({ ...form, jobType: e.target.value })}
               className="w-full border rounded-lg px-4 py-3 text-black"
             >
-              <option value="HVAC">HVAC</option>
-              <option value="Construction">Construction</option>
-              <option value="Electrical">Electrical</option>
+              <option value="HVAC Team">HVAC Team</option>
+              <option value="Construction Team">Construction Team</option>
+              <option value="Electrical Team">Electrical Team</option>
               <option value="Other">Other</option>
             </select>
 
@@ -114,9 +140,31 @@ export default function JobsPage() {
                 type="file"
                 id="file-upload"
                 className="hidden"
-                onChange={(e) =>
+                onChange={(e) => {
+                  const file = e.target.files?.[0];
+                  if (!file) return;
+
+                  if (file.size > MAX_FILE_SIZE) {
+                    alert("File must be 5MB or smaller.");
+                    e.target.value = "";
+                    return;
+                  }
+
+                  if (!ALLOWED_FILE_TYPES.includes(file.type)) {
+                    alert("Only PDF, DOC, or DOCX files are allowed.");
+                    e.target.value = "";
+                    return;
+                  }
+
+                  const extension = file.name.split(".").pop()?.toLowerCase();
+                  if (!extension || !ALLOWED_EXTENSIONS.includes(extension)) {
+                    alert("Invalid file format.");
+                    e.target.value = "";
+                    return;
+                  }
+
                   setForm({ ...form, file: e.target.files?.[0] || null })
-                }
+                }}
               />
               <button
                 type="button"
@@ -131,12 +179,19 @@ export default function JobsPage() {
                 </span>
               )}
             </div>
-            
+            <p className="text-sm text-gray-500">
+                Accepted formats: PDF, DOC, DOCX (max 5MB)
+            </p>
             <button
               type="submit"
-              className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700"
+              disabled={loading}
+              className={`w-full px-8 py-3 rounded-lg font-semibold text-white transition ${
+                loading
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-orange-600 hover:bg-orange-700"
+              }`}
             >
-              Submit Application
+              {loading ? "Submitting..." : "Submit Application"}
             </button>
 
             {status && <p className="text-sm mt-2">{status}</p>}
