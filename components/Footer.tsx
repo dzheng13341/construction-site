@@ -23,7 +23,7 @@ export default function Footer() {
             <li>Renovations</li>
             <li>HVAC Installation</li>
             <li>Electrical</li>
-            <li>Commercial Construction</li>
+            <li>Design & Planning</li>
           </ul>
         </div>
 

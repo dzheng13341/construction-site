@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const fadeUp = {
@@ -125,6 +125,25 @@ export default function ServicesPage() {
           </div>
         </motion.div>
       </section>
+
+      <section className="bg-slate-600 py-15">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h3 className="text-3xl font-bold text-white mb-4">
+            Need help planning before you build?
+          </h3>
+          <p className="text-slate-300 text-lg mb-8">
+            Our design and planning services help turn ideas into clear,
+            build-ready plans.
+          </p>
+          <Link
+            href="/design"
+            className="inline-block bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-700 transition"
+          >
+            View Design & Planning
+          </Link>
+        </div>
+      </section>
+
     </main>
   );
 }

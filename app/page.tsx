@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -13,7 +13,8 @@ export default function HomePage() {
     <main className="overflow-hidden">
 
       {/* MAIN */}
-      <section className="bg-slate-800 py-28">
+      <section className="bg-contain bg-center bg-no-repeat py-28"
+      style={{ backgroundImage: "url('/logo4.png')" }}>
         <motion.div
           initial="hidden"
           animate="visible"
@@ -21,10 +22,10 @@ export default function HomePage() {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto px-6 text-center"
         >
-          <h1 className="text-5xl font-bold text-white mb-6">
+          <h1 className="text-5xl font-bold text-black mb-6">
             Quality Construction You Can Trust
           </h1>
-          <p className="text-slate-300 text-xl mb-10">
+          <p className="text-slate-800 text-xl mb-10">
             Reliable service, skilled craftsmanship, and honest work from start to finish.
           </p>
 
