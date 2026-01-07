@@ -5,10 +5,10 @@ import ProjectsCard from "@/components/ProjectCard";
 
 const projects = [
   {
-    title: "Modern Home Renovation",
+    title: "Ductwork Installation",
     category: "Renovation",
-    description: "Complete interior and exterior remodel with modern finishes.",
-    image: "/projects/modern-renovation.jpg",
+    description: "Ductwork installation for a commercial restaurant.",
+    image: "/projects/ductwork.jpeg",
   },
   {
     title: "Commercial HVAC Installation",

@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Air and Sun Construction",
-  description: "Renovations, HVAC, and Commercial Construction",
+  description: "Renovations, HVAC, and General Contracting Services. Website by dzheng13341@gmail.com",
 };
 
 export default function RootLayout({
@@ -14,9 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="flex flex-col min-h-screen bg-white">
         <Navbar />
-        <main className="min-h-screen">{children}</main>
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>

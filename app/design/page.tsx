@@ -78,17 +78,18 @@ export default function PlanningPage() {
 
           <div className="order-1 md:order-2">
             <h2 className="text-4xl font-bold text-black mb-6">
-              Layout & Space Design
+              Electrical, Plumbing & Mechanical Plans
             </h2>
             <p className="text-neutral-700 text-lg mb-6">
-              We create functional layouts that maximize space, improve flow,
-              and support your lifestyle or business operations.
+              We create clear, coordinated plans for electrical, plumbing, gas, and
+              mechanical systems. Our designs prioritize safety, functionality, and
+              code compliance.
             </p>
             <ul className="space-y-2 text-neutral-700">
-              <li>• Floor plan development</li>
-              <li>• Room flow & space optimization</li>
-              <li>• Residential & commercial layouts</li>
-              <li>• Build-ready drawings</li>
+              <li>• Electrical layouts & circuit planning</li>
+              <li>• Plumbing & gas line routing</li>
+              <li>• Mechanical system coordination</li>
+              <li>• Trade-ready drawings</li>
             </ul>
           </div>
         </motion.div>
@@ -114,47 +115,15 @@ export default function PlanningPage() {
               without delays.
             </p>
             <ul className="space-y-2 text-neutral-700">
-              <li>• Code-compliant designs</li>
+              <li>• Code-compliant system designs</li>
               <li>• Permit-ready documentation</li>
-              <li>• Coordination with inspectors</li>
-              <li>• Reduced approval delays</li>
+              <li>• Coordination with local requirements</li>
+              <li>• Fewer delays during approval</li>
             </ul>
           </div>
 
           <div className="bg-neutral-100 rounded-xl h-80 flex items-center justify-center text-6xl">
             📝
-          </div>
-        </motion.div>
-      </section>
-
-      {/* PRE-CONSTRUCTION PLANNING */}
-      <section className="bg-neutral-50 py-24">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeUp}
-          transition={{ duration: 0.6 }}
-          className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
-        >
-          <div className="order-2 md:order-1 bg-neutral-100 rounded-xl h-80 flex items-center justify-center text-6xl">
-            🏗️
-          </div>
-
-          <div className="order-1 md:order-2">
-            <h2 className="text-4xl font-bold text-black mb-6">
-              Pre-Construction Planning
-            </h2>
-            <p className="text-neutral-700 text-lg mb-6">
-              Before construction begins, we help define scope, timelines, and
-              materials to minimize surprises and keep your project on track.
-            </p>
-            <ul className="space-y-2 text-neutral-700">
-              <li>• Project scope definition</li>
-              <li>• Timeline & milestone planning</li>
-              <li>• Material & system coordination</li>
-              <li>• Cost planning support</li>
-            </ul>
           </div>
         </motion.div>
       </section>

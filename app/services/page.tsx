@@ -24,7 +24,8 @@ export default function ServicesPage() {
             Our Services
           </h1>
           <p className="text-gray-700 text-xl">
-            Comprehensive construction and HVAC services tailored to your needs.
+            Professional general contracting services specializing in HVAC, renovations,
+            and essential electrical, mechanical, and plumbing work.
           </p>
         </motion.div>
       </section>
@@ -44,9 +45,9 @@ export default function ServicesPage() {
               HVAC Services
             </h2>
             <p className="text-gray-700 text-lg mb-6">
-              Installation, repair, and maintenance of residential and
-              commercial HVAC systems. We ensure efficiency, comfort, and
-              long-term reliability.
+              We provide reliable installation, repair,
+              and maintenance services for residential and light commercial systems, with a
+              strong focus on efficiency, comfort, and long-term performance.
             </p>
             <ul className="space-y-2 text-gray-700">
               <li>• System installation & replacement</li>
@@ -78,17 +79,18 @@ export default function ServicesPage() {
 
           <div className="order-1 md:order-2">
             <h2 className="text-4xl font-bold text-black mb-6">
-              Construction
+              General Contracting
             </h2>
             <p className="text-gray-700 text-lg mb-6">
-              From ground-up builds to structural improvements, we handle every
-              phase of construction with precision and care.
+              We handle a wide range of residential and small
+              commercial projects. We focus on well-planned, high-quality work rather than
+              large-scale new construction.
             </p>
             <ul className="space-y-2 text-gray-700">
-              <li>• Residential & commercial construction</li>
-              <li>• Structural upgrades</li>
-              <li>• Project management</li>
-              <li>• Code-compliant builds</li>
+              <li>• Electrical, mechanical, & plumbing work</li>
+              <li>• Coordinated multi-trade projects</li>
+              <li>• Code-compliant installations & upgrades</li>
+              <li>• Project oversight from start to finish</li>
             </ul>
           </div>
         </motion.div>
@@ -109,14 +111,15 @@ export default function ServicesPage() {
               Renovations
             </h2>
             <p className="text-gray-700 text-lg mb-6">
-              High-quality renovation services designed to modernize,
-              improve functionality, and add lasting value to your property.
+              We specialize in renovation projects that improve comfort, functionality, and
+              value. Whether it’s a single-room upgrade or a full interior refresh, we focus
+              on quality craftsmanship and attention to detail.
             </p>
             <ul className="space-y-2 text-gray-700">
-              <li>• Kitchen & bathroom remodels</li>
-              <li>• Interior & exterior renovations</li>
-              <li>• Flooring, drywall, & finishes</li>
-              <li>• Custom solutions</li>
+              <li>• Kitchen & bathroom renovations</li>
+              <li>• Interior & exterior upgrades</li>
+              <li>• Drywall, flooring, and finish work</li>
+              <li>• HVAC, electrical, & plumbing integration</li>
             </ul>
           </div>
 

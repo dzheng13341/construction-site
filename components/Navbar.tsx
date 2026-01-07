@@ -1,17 +1,28 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 
 export default function Navbar() {
+  const pathname = usePathname();
+
+  const showLogo = pathname !== "/";
   return (
     <nav className="bg-white shadow-sm w-full">
       <div className="max-w-7xl mx-auto pr-4 py-6 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3 whitespace-nowrap -ml-18">
+          {showLogo && (
+            <Image
+              src="/logo.png"
+              alt="Air & Sun Co Logo"
+              width={110}
+              height={110}
+              priority
+            />
+          )}
           <span className="ml-4 text-2xl md:text-3xl font-bold text-black">
-            <span className="text-blue-500">Air</span>{" "}
-            And
-            <span className="text-orange-500"> Sun</span>{" "}
-            Construction
+            Air and Sun Construction
           </span>
         </Link>
 

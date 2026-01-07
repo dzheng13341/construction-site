@@ -62,12 +62,12 @@ export default function HomePage() {
               Built on Quality & Trust
             </h2>
             <p className="text-gray-700 text-lg mb-6">
-              Air & Sun Co is a full-service construction and HVAC company
-              dedicated to delivering high-quality workmanship and dependable service.
+              Air & Sun Construction is a general contracting and HVAC company focused on high-quality
+              workmanship, clear planning, and dependable service.
             </p>
             <p className="text-gray-700 text-lg">
-              From renovations to system installations, we take pride in doing
-              the job right the first time.
+              From renovations to HVAC, electrical, and plumbing system installations, we
+              take pride in doing the job right the first time.
             </p>
           </div>
 
@@ -94,7 +94,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { title: "HVAC Services", icon: "❄️" },
-              { title: "Construction", icon: "🏠" },
+              { title: "General Contracting", icon: "🏠" },
               { title: "Renovations", icon: "🔨" },
             ].map((service) => (
               <div
@@ -130,7 +130,7 @@ export default function HomePage() {
           className="max-w-6xl mx-auto px-6"
         >
           <h2 className="text-4xl font-bold text-black mb-12 text-center">
-            Why Choose Air & Sun Co
+            Why Choose Air & Sun Construction
           </h2>
 
           <div className="grid md:grid-cols-4 gap-8 text-center">

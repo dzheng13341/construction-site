@@ -9,8 +9,7 @@ export default function Footer() {
             Air And Sun Construction
           </h3>
           <p className="text-sm">
-            Building quality residential and commercial projects with
-            reliability, safety, and craftsmanship.
+            Reliable planning and skilled workmanship for residential and commercial projects.
           </p>
         </div>
 
@@ -22,7 +21,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li>Renovations</li>
             <li>HVAC Installation</li>
-            <li>Electrical</li>
+            <li>MEP</li>
             <li>Design & Planning</li>
           </ul>
         </div>
@@ -47,7 +46,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li>Licensed & Insured</li>
             <li>Bonded</li>
-            <li>© {new Date().getFullYear()} Air And Sun Construction</li>
+            <li>© {new Date().getFullYear()} Air And Sun Construction & Mechanical, Inc.</li>
           </ul>
         </div>
 
