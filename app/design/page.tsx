@@ -23,46 +23,13 @@ export default function PlanningPage() {
             Design & Planning
           </h1>
           <p className="text-neutral-700 text-xl">
-            Smart planning and professional design to ensure efficient,
-            compliant, and build-ready projects.
+            Expert <strong>planning and design services</strong> to create efficient, compliant, and build-ready projects.
+            We guide you from <strong>concept to construction</strong>, making the process simple and stress-free.
           </p>
         </motion.div>
       </section>
 
-      {/* HVAC PLANNING */}
-      <section className="bg-white py-24">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeUp}
-          transition={{ duration: 0.6 }}
-          className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
-        >
-          <div>
-            <h2 className="text-4xl font-bold text-black mb-6">
-              HVAC System Planning
-            </h2>
-            <p className="text-neutral-700 text-lg mb-6">
-              We design HVAC systems that are efficient, balanced, and tailored
-              to your space. Proper planning ensures comfort, energy savings,
-              and long-term performance.
-            </p>
-            <ul className="space-y-2 text-neutral-700">
-              <li>• Load calculations & system sizing</li>
-              <li>• Ductwork & airflow planning</li>
-              <li>• Equipment selection</li>
-              <li>• Energy efficiency optimization</li>
-            </ul>
-          </div>
-
-          <div className="bg-neutral-100 rounded-xl h-80 flex items-center justify-center text-6xl">
-            ❄️
-          </div>
-        </motion.div>
-      </section>
-
-      {/* LAYOUT & SPACE DESIGN */}
+    {/* ELECTRICAL / PLUMBING */}
       <section className="bg-neutral-50 py-24">
         <motion.div
           initial="hidden"
@@ -81,21 +48,50 @@ export default function PlanningPage() {
               Electrical, Plumbing & Mechanical Plans
             </h2>
             <p className="text-neutral-700 text-lg mb-6">
-              We create clear, coordinated plans for electrical, plumbing, gas, and
-              mechanical systems. Our designs prioritize safety, functionality, and
-              code compliance.
+              We create <strong>coordinated, trade-ready plans</strong> for electrical, plumbing, gas, and mechanical systems. Our designs prioritize safety, efficiency, and compliance.
             </p>
             <ul className="space-y-2 text-neutral-700">
-              <li>• Electrical layouts & circuit planning</li>
-              <li>• Plumbing & gas line routing</li>
-              <li>• Mechanical system coordination</li>
-              <li>• Trade-ready drawings</li>
+              <li>• <strong>Electrical layouts & circuit planning</strong></li>
+              <li>• <strong>Plumbing & gas line routing</strong></li>
+              <li>• <strong>Mechanical system coordination</strong></li>
+              <li>• <strong>Clear, permit-ready drawings</strong></li>
             </ul>
           </div>
         </motion.div>
       </section>
 
-      {/* PERMIT & CODE PLANNING */}
+      {/* HVAC PLANNING */}
+      <section className="bg-white py-24">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          transition={{ duration: 0.6 }}
+          className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+        >
+          <div>
+            <h2 className="text-4xl font-bold text-black mb-6">
+              HVAC System Design
+            </h2>
+            <p className="text-neutral-700 text-lg mb-6">
+              We design <strong>efficient, balanced HVAC systems</strong> tailored to your space. Proper planning ensures comfort, energy savings, and reliable performance.
+            </p>
+            <ul className="space-y-2 text-neutral-700">
+              <li>• <strong>Load calculations & system sizing</strong></li>
+              <li>• <strong>Ductwork & airflow planning</strong></li>
+              <li>• <strong>Equipment selection & layout</strong></li>
+              <li>• <strong>Energy efficiency optimization</strong></li>
+            </ul>
+          </div>
+
+          <div className="bg-neutral-100 rounded-xl h-80 flex items-center justify-center text-6xl">
+            ❄️
+          </div>
+        </motion.div>
+      </section>
+
+      {/* PERMITS & CODE */}
       <section className="bg-white py-24">
         <motion.div
           initial="hidden"
@@ -110,15 +106,13 @@ export default function PlanningPage() {
               Permit & Code Planning
             </h2>
             <p className="text-neutral-700 text-lg mb-6">
-              We prepare plans that meet local building codes and permitting
-              requirements, helping your project move forward smoothly and
-              without delays.
+              We handle <strong>all permitting and code compliance</strong> tasks, ensuring your project moves forward smoothly with minimal delays.
             </p>
             <ul className="space-y-2 text-neutral-700">
-              <li>• Code-compliant system designs</li>
-              <li>• Permit-ready documentation</li>
-              <li>• Coordination with local requirements</li>
-              <li>• Fewer delays during approval</li>
+              <li>• <strong>Code-compliant system designs</strong></li>
+              <li>• <strong>Permit-ready documentation</strong></li>
+              <li>• <strong>Coordination with local authorities</strong></li>
+              <li>• <strong>Faster approvals & fewer delays</strong></li>
             </ul>
           </div>
 
@@ -128,13 +122,14 @@ export default function PlanningPage() {
         </motion.div>
       </section>
 
+      {/* CTA */}
       <section className="bg-slate-600 py-15">
         <div className="max-w-4xl mx-auto px-6 text-center">
             <h3 className="text-3xl font-bold text-white mb-4">
             Ready to bring your plans to life?
             </h3>
             <p className="text-slate-300 text-lg mb-8">
-            Our construction and HVAC teams are ready to build with precision and care.
+            Our all-in-one construction services ensure your project is executed with precision, care, and efficiency.
             </p>
             <Link
             href="/services"
@@ -143,7 +138,7 @@ export default function PlanningPage() {
             View Our Services
             </Link>
         </div>
-        </section>
+      </section>
 
     </main>
   );

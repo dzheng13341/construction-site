@@ -24,13 +24,13 @@ export default function ServicesPage() {
             Our Services
           </h1>
           <p className="text-gray-700 text-xl">
-            Professional general contracting services specializing in HVAC, renovations,
-            and essential electrical, mechanical, and plumbing work.
+            We specialize in building <strong>restaurants, supermarkets, and commercial kitchens</strong>.
+            From planning and permits to construction and finishing touches, we offer full-service solutions for your project.
           </p>
         </motion.div>
       </section>
 
-      {/* HVAC */}
+      {/* FULL-SERVICE SOLUTIONS */}
       <section className="bg-white py-24">
         <motion.div
           initial="hidden"
@@ -42,28 +42,26 @@ export default function ServicesPage() {
         >
           <div>
             <h2 className="text-4xl font-bold text-black mb-6">
-              HVAC Services
+              Full-Service Construction
             </h2>
             <p className="text-gray-700 text-lg mb-6">
-              We provide reliable installation, repair,
-              and maintenance services for residential and light commercial systems, with a
-              strong focus on efficiency, comfort, and long-term performance.
+              We handle every step of your project, so you don’t have to worry about the details.
             </p>
             <ul className="space-y-2 text-gray-700">
-              <li>• System installation & replacement</li>
-              <li>• Preventative maintenance</li>
-              <li>• Repairs & diagnostics</li>
-              <li>• Energy efficiency upgrades</li>
+              <li><strong>• Permits & approvals management</strong></li>
+              <li><strong>• Custom plan design and layout</strong></li>
+              <li><strong>• Integration of HVAC, plumbing, and electrical systems</strong></li>
+              <li><strong>• Post-construction support and finishing</strong></li>
             </ul>
           </div>
 
           <div className="bg-gray-100 rounded-xl h-80 flex items-center justify-center text-6xl">
-            ❄️
+            🏗️
           </div>
         </motion.div>
       </section>
 
-      {/* CONSTRUCTION */}
+      {/* COMMERCIAL SPECIALTIES */}
       <section className="bg-gray-50 py-24">
         <motion.div
           initial="hidden"
@@ -74,23 +72,21 @@ export default function ServicesPage() {
           className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
         >
           <div className="order-2 md:order-1 bg-gray-100 rounded-xl h-80 flex items-center justify-center text-6xl">
-            🏠
+            🍴
           </div>
 
           <div className="order-1 md:order-2">
             <h2 className="text-4xl font-bold text-black mb-6">
-              General Contracting
+              Commercial Kitchens & Restaurants
             </h2>
             <p className="text-gray-700 text-lg mb-6">
-              We handle a wide range of residential and small
-              commercial projects. We focus on well-planned, high-quality work rather than
-              large-scale new construction.
+              Our expertise includes specialized facilities designed for efficiency and safety.
             </p>
             <ul className="space-y-2 text-gray-700">
-              <li>• Electrical, mechanical, & plumbing work</li>
-              <li>• Coordinated multi-trade projects</li>
-              <li>• Code-compliant installations & upgrades</li>
-              <li>• Project oversight from start to finish</li>
+              <li><strong>• Restaurants and cafés</strong></li>
+              <li><strong>• Supermarkets and retail food spaces</strong></li>
+              <li><strong>• Commercial kitchens and prep areas</strong></li>
+              <li><strong>• Customized layouts for workflow efficiency</strong></li>
             </ul>
           </div>
         </motion.div>
@@ -108,18 +104,16 @@ export default function ServicesPage() {
         >
           <div>
             <h2 className="text-4xl font-bold text-black mb-6">
-              Renovations
+              Renovations & Upgrades
             </h2>
             <p className="text-gray-700 text-lg mb-6">
-              We specialize in renovation projects that improve comfort, functionality, and
-              value. Whether it’s a single-room upgrade or a full interior refresh, we focus
-              on quality craftsmanship and attention to detail.
+              We improve existing spaces to increase functionality, efficiency, and aesthetics. Perfect for restaurants, commercial kitchens, and retail spaces.
             </p>
             <ul className="space-y-2 text-gray-700">
-              <li>• Kitchen & bathroom renovations</li>
-              <li>• Interior & exterior upgrades</li>
-              <li>• Drywall, flooring, and finish work</li>
-              <li>• HVAC, electrical, & plumbing integration</li>
+              <li><strong>• Interior and exterior renovations</strong></li>
+              <li><strong>• Equipment and system upgrades</strong></li>
+              <li><strong>• Workflow optimization and layout redesign</strong></li>
+              <li><strong>• Integration with existing HVAC, electrical, and plumbing</strong></li>
             </ul>
           </div>
 
@@ -129,14 +123,15 @@ export default function ServicesPage() {
         </motion.div>
       </section>
 
+      {/* DESIGN & PLANNING CTA */}
       <section className="bg-slate-600 py-15">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h3 className="text-3xl font-bold text-white mb-4">
-            Need help planning before you build?
+            Free Design & Planning Services
           </h3>
           <p className="text-slate-300 text-lg mb-8">
-            Our design and planning services help turn ideas into clear,
-            build-ready plans.
+            Our expert team can help design plans for your project at no cost.
+            We guide you from concept to completion, making the process stress-free.
           </p>
           <Link
             href="/design"

@@ -9,7 +9,7 @@ export default function Footer() {
             Air And Sun Construction
           </h3>
           <p className="text-sm">
-            Reliable planning and skilled workmanship for residential and commercial projects.
+            Reliable planning and skilled workmanship for commercial projects.
           </p>
         </div>
 
@@ -34,6 +34,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li>📞 (916) 291-9416</li>
             <li>✉️ info@airandsunco.com</li>
+            <li>✉️ airsuncompany@gmail.com</li>
             <li>📍 8982 Elder Creek Rd Sacramento, CA</li>
           </ul>
         </div>
