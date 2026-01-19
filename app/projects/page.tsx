@@ -5,27 +5,27 @@ import ProjectsCard from "@/components/ProjectCard";
 
 const projects = [
   {
-    title: "Ductwork Installation",
-    category: "Renovation",
-    description: "Ductwork installation for a commercial restaurant.",
+    title: "Electrical Installation",
+    category: "Commercial Electrical",
+    description: "Electrical installation for a commercial facility, including power distribution and lighting systems.",
     image: "/projects/ductwork.jpeg",
   },
   {
     title: "Commercial HVAC Installation",
-    category: "HVAC",
-    description: "High-efficiency HVAC system for a commercial building.",
-    image: "/projects/commercial-hvac1.jpg",
+    category: "HVAC Systems",
+    description: "Installation of a high-efficiency HVAC system for commercial applications.",
+    image: "/projects/ductwork.jpeg",
   },
   {
-    title: "Kitchen Remodel",
-    category: "Construction",
-    description: "Custom cabinetry, countertops, and lighting upgrades.",
-    image: "/projects/kitchen-remodel.jpg",
+    title: "Stainless Steel Kitchen",
+    category: "Commercial Construction",
+    description: "Installation and integration of stainless steel commercial kitchen equipment.",
+    image: "/projects/commercial-kitchen.jpg",
   },
   {
-    title: "Office Build-Out",
-    category: "Commercial",
-    description: "Full office construction with electrical and HVAC work.",
+    title: "Office Renovation",
+    category: "Renovation",
+    description: "Complete office renovation including electrical and HVAC systems.",
     image: "/projects/office-buildout.jpg",
   },
 ];

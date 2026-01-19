@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -30,7 +31,7 @@ export default function PlanningPage() {
       </section>
 
     {/* ELECTRICAL / PLUMBING */}
-      <section className="bg-neutral-50 py-24">
+      <section className="bg-white py-24">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -39,8 +40,14 @@ export default function PlanningPage() {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
         >
-          <div className="order-2 md:order-1 bg-neutral-100 rounded-xl h-80 flex items-center justify-center text-6xl">
-            📐
+          <div className="order-2 md:order-1 relative h-80 rounded-xl overflow-hidden bg-neutral-100">
+            <Image
+              src="/images/MEPplan.png"
+              alt="Commercial design and planning layouts"
+              fill
+              className="object-cover"
+              priority={false}
+            />
           </div>
 
           <div className="order-1 md:order-2">
@@ -61,7 +68,7 @@ export default function PlanningPage() {
       </section>
 
       {/* HVAC PLANNING */}
-      <section className="bg-white py-24">
+      <section className="bg-neutral-50 py-24">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -85,8 +92,14 @@ export default function PlanningPage() {
             </ul>
           </div>
 
-          <div className="bg-neutral-100 rounded-xl h-80 flex items-center justify-center text-6xl">
-            ❄️
+          <div className="order-2 md:order-1 relative h-80 rounded-xl overflow-hidden bg-neutral-100">
+            <Image
+              src="/images/HVACplan.png"
+              alt="HVAC design and planning layouts"
+              fill
+              className="object-cover"
+              priority={false}
+            />
           </div>
         </motion.div>
       </section>
@@ -101,7 +114,17 @@ export default function PlanningPage() {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
         >
-          <div>
+          <div className="order-2 md:order-1 relative h-80 rounded-xl overflow-hidden bg-neutral-100">
+            <Image
+              src="/images/plans-approved.jpg"
+              alt="Approved design and planning layouts"
+              fill
+              className="object-cover"
+              priority={false}
+            />
+          </div>
+
+          <div className="order-1 md:order-2">
             <h2 className="text-4xl font-bold text-black mb-6">
               Permit & Code Planning
             </h2>
@@ -114,10 +137,6 @@ export default function PlanningPage() {
               <li>• <strong>Coordination with local authorities</strong></li>
               <li>• <strong>Faster approvals & fewer delays</strong></li>
             </ul>
-          </div>
-
-          <div className="bg-neutral-100 rounded-xl h-80 flex items-center justify-center text-6xl">
-            📝
           </div>
         </motion.div>
       </section>
