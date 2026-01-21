@@ -8,7 +8,7 @@ const projects = [
     title: "Electrical Installation",
     category: "Commercial Electrical",
     description: "Electrical installation for a commercial facility, including power distribution and lighting systems.",
-    image: "/projects/ductwork.jpeg",
+    image: "/projects/electrical1.png",
   },
   {
     title: "Commercial HVAC Installation",
@@ -20,13 +20,13 @@ const projects = [
     title: "Stainless Steel Kitchen",
     category: "Commercial Construction",
     description: "Installation and integration of stainless steel commercial kitchen equipment.",
-    image: "/projects/commercial-kitchen.jpg",
+    image: "/projects/commercial-kitchen1.jpg",
   },
   {
     title: "Office Renovation",
     category: "Renovation",
     description: "Complete office renovation including electrical and HVAC systems.",
-    image: "/projects/office-buildout.jpg",
+    image: "/projects/office-buildout1.jpg",
   },
 ];
 

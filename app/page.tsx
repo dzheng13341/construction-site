@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -125,9 +126,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="bg-gray-100 rounded-xl h-80 flex items-center justify-center text-6xl">
-            🏗️
-          </div>
+          <BeforeAfterSlider />
         </motion.div>
       </section>
 
@@ -147,7 +146,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: "Restaurant & Retail Construction", icon: "🏠" },
+              { title: "Restaurant & Retail Construction", icon: "🛒" },
               { title: "Kitchen Build-Outs & Renovations", icon: "🔨" },
               { title: "Commercial HVAC Systems", icon: "❄️" },
             ].map((service) => (

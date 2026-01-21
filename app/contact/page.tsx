@@ -61,7 +61,7 @@ export default function ContactPage() {
 
               <div>
                 <p className="font-semibold">Service Area</p>
-                <p>Sacramento</p>
+                <p>Sacramento County</p>
               </div>
             </div>
           </div>

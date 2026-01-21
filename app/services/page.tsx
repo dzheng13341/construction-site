@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -34,8 +35,7 @@ export default function ServicesPage() {
       <section className="bg-white py-24">
         <motion.div
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          animate="visible"
           variants={fadeUp}
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
@@ -55,8 +55,14 @@ export default function ServicesPage() {
             </ul>
           </div>
 
-          <div className="bg-gray-100 rounded-xl h-80 flex items-center justify-center text-6xl">
-            🏗️
+          <div className="order-2 md:order-1 relative h-80 rounded-xl overflow-hidden bg-neutral-100">
+            <Image
+              src="/images/full-construction.png"
+              alt="Full construction service"
+              fill
+              className="object-cover"
+              priority={false}
+            />
           </div>
         </motion.div>
       </section>
@@ -71,8 +77,14 @@ export default function ServicesPage() {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
         >
-          <div className="order-2 md:order-1 bg-gray-100 rounded-xl h-80 flex items-center justify-center text-6xl">
-            🍴
+          <div className="order-2 md:order-1 relative h-80 rounded-xl overflow-hidden bg-neutral-100">
+            <Image
+              src="/images/com-kitchen.jpg"
+              alt="Full construction service"
+              fill
+              className="object-cover"
+              priority={false}
+            />
           </div>
 
           <div className="order-1 md:order-2">
@@ -117,8 +129,14 @@ export default function ServicesPage() {
             </ul>
           </div>
 
-          <div className="bg-gray-100 rounded-xl h-80 flex items-center justify-center text-6xl">
-            🔨
+          <div className="order-2 md:order-1 relative h-80 rounded-xl overflow-hidden bg-neutral-100">
+            <Image
+              src="/images/renovation.jpg"
+              alt="Full construction service"
+              fill
+              className="object-cover"
+              priority={false}
+            />
           </div>
         </motion.div>
       </section>

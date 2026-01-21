@@ -34,8 +34,7 @@ export default function PlanningPage() {
       <section className="bg-white py-24">
         <motion.div
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          animate="visible"
           variants={fadeUp}
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
