@@ -5,6 +5,7 @@ type ProjectsCardProps = {
   category: string;
   description: string;
   image: string; // Path to image in /public
+  onClick?: () => void;
 };
 
 export default function ProjectsCard({
@@ -12,9 +13,13 @@ export default function ProjectsCard({
   category,
   description,
   image,
+  onClick,
 }: ProjectsCardProps) {
   return (
-    <div className="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+    <div
+      onClick={onClick}
+      className="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer"
+    >
       {/* Image */}
       <div className="relative w-full h-56 bg-gray-200">
         <Image
